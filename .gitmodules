@@ -1,0 +1,3 @@
+[submodule "plugin/vimperator-pocket"]
+	path = plugin/vimperator-pocket
+	url = https://github.com/pschmitt/vimperator-pocket.git
