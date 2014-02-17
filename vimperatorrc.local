@@ -1,0 +1,25 @@
+" load libly
+source ~/.config/vimperator/plugin/_libly.js
+
+" Colorscheme
+colorscheme molokai
+
+" Ctrl-F8 to toggle status bar
+map <silent> <C-F8> :js toggle_bottombar()<CR>
+
+" Toggle status bar
+:js << EOF
+function toggle_bottombar() {
+    var bb = document.getElementById('liberator-bottombar');
+    if (!bb)
+        return;
+    bb.style.height = (bb.style.height == '') ? '0px' : '';
+    bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+    }
+EOF
+
+" Wallabag URL
+let g:wallabag_url="http://ril.lxl.io"
+
+" Sensitive data
+source! .config/vimperator/vimperatorrc.private
