@@ -4,3 +4,6 @@
 [submodule "vimperator-plugins"]
 	path = vimperator-plugins
 	url = https://github.com/vimpr/vimperator-plugins
+[submodule "plugin/vimperator-wallabag"]
+	path = plugin/vimperator-wallabag
+	url = https://github.com/pschmitt/vimperator-wallabag.git
