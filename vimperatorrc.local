@@ -6,6 +6,18 @@ colorscheme molokai
 
 " Ctrl-F8 to toggle status bar
 map <silent> <C-F8> :js toggle_bottombar()<CR>
+map <silent> <C-F9> :js toggle_navbar()<CR>
+
+" Toggle nav bar
+:js << EOF
+function toggle_navbar() {
+    if (options['toolbars'].contains('nonavigation')) {
+        options['toolbars'] = 'noaddons,nobookmarks,nomenu,navigation,tabs';
+    } else {
+        options['toolbars'] = 'noaddons,nobookmarks,nomenu,nonavigation,tabs';
+    }
+}
+EOF
 
 " Toggle status bar
 :js << EOF
@@ -15,7 +27,7 @@ function toggle_bottombar() {
         return;
     bb.style.height = (bb.style.height == '') ? '0px' : '';
     bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
-    }
+}
 EOF
 
 " Wallabag URL
