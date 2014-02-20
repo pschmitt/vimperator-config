@@ -12,9 +12,9 @@ map <silent> <C-F9> :js toggle_navbar()<CR>
 :js << EOF
 function toggle_navbar() {
     if (options['toolbars'].contains('nonavigation')) {
-        options['toolbars'] = 'noaddons,nobookmarks,nomenu,navigation,tabs';
+        options['toolbars'] = 'navigation';
     } else {
-        options['toolbars'] = 'noaddons,nobookmarks,nomenu,nonavigation,tabs';
+        options['toolbars'] = 'nonavigation';
     }
 }
 EOF
