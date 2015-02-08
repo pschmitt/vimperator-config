@@ -35,3 +35,6 @@ let g:wallabag_url="http://ril.lxl.io"
 
 " Sensitive data
 source! .config/vimperator/vimperatorrc.private
+
+" Hide URL bar
+set toolbars=nonavigation
